@@ -10,7 +10,7 @@ import { emoteList } from '../../emoteData';
 })
 export class EmoteComponent implements OnInit {
   
-  @Input() emote:Emote = emoteList[5];
+  @Input() emote:Emote = emoteList[1];
 
   constructor() {}
 
