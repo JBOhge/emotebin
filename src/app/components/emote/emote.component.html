@@ -1,1 +1,12 @@
-<p>emote works!</p>
+<div class="emote-container">
+    <div class="image-container">
+        <img [src]="emote.url" alt="emote-image" id="emote-image" data-test="emote-image">
+    </div>
+    <p data-test="emote-code">{{emote.code}}</p>
+    <p data-test="emote-description">{{emote.description}}</p>
+    <p data-test="emote-price">{{emote.price.toString()|currency}}</p>
+    <div class="btn-container" data-test="add-to-cart-btn">
+        <button mat-raised-button color="primary">Add to Cart</button>
+    </div>
+</div>
+

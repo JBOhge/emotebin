@@ -8,6 +8,10 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+
+
 
 
 @NgModule({
@@ -21,7 +25,9 @@ import { MatSliderModule } from '@angular/material/slider';
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatSliderModule
+    MatSliderModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
