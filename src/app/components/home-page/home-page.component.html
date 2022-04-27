@@ -1,2 +1,12 @@
-<p>home-page works!</p>
+<div class="container">
+    <div class="emotelist-container">
+        <div class="emotes" *ngFor="let emote of emoteList">
+            <app-emote [emote]=emote data-test="emote"></app-emote>
+        </div>
+    </div>
+</div>
+
+
+
+
 
