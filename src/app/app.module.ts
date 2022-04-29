@@ -10,6 +10,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import { NavbarComponent } from './navbar/navbar.component';
+import {MatIconModule} from '@angular/material/icon';
+import { InfopageComponent } from './components/infopage/infopage.component';
 
 
 
@@ -18,7 +21,9 @@ import {MatButtonModule} from '@angular/material/button';
   declarations: [
     AppComponent,
     EmoteComponent,
-    HomePageComponent
+    HomePageComponent,
+    NavbarComponent,
+    InfopageComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,8 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     MatSliderModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
