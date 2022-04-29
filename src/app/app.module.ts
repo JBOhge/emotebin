@@ -11,6 +11,8 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { NavbarComponent } from './navbar/navbar.component';
+import {MatIconModule} from '@angular/material/icon';
+import { InfopageComponent } from './components/infopage/infopage.component';
 
 
 
@@ -20,7 +22,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppComponent,
     EmoteComponent,
     HomePageComponent,
-    NavbarComponent
+    NavbarComponent,
+    InfopageComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrowserAnimationsModule,
     MatSliderModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

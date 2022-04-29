@@ -2,15 +2,14 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavbarComponent } from './navbar.component';
 
-describe('NavbarComponent', () => {
+fdescribe('NavbarComponent', () => {
   let component: NavbarComponent;
   let fixture: ComponentFixture<NavbarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavbarComponent ]
-    })
-    .compileComponents();
+      declarations: [NavbarComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -22,4 +21,13 @@ describe('NavbarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have a home button/title', () => {
+    expect(fixture.nativeElement.querySelector('[data-test="home-btn"]')).toBeTruthy();
+  });
+  
+  it('should have a info button', () => {
+    expect(fixture.nativeElement.querySelector('[data-test="info-btn"]')).toBeTruthy();
+  });
+  
 });

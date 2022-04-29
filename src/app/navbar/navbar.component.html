@@ -1,1 +1,16 @@
-<p>navbar works!</p>
+<div class="nav-container">
+    <div class="left-side">
+        <div routerLink="/" routerLinkActive="active" class="title-container" data-test="home-btn">
+            <p class="title">EMOTEBIN</p>
+        </div>
+        <div class="btn-container" data-test="info-btn">
+            <button mat-raised-button routerLink="/info" routerLinkActive="active" color="primary">Info</button>
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="cart-icon">
+            <mat-icon>shopping_cart</mat-icon>
+        </div>
+    </div>
+    
+</div>
