@@ -1,3 +1,4 @@
+import { Observable, of } from 'rxjs';
 import { Emote } from './models/emote';
 
 export const emoteList = {
@@ -101,4 +102,8 @@ export const emoteList = {
   }
 };
 
-
+export function getPage(pageNum:number, pageSize:number):Observable<any>{
+  let start: number = (pageNum - 1) * pageSize;
+  let end = start + pageSize;
+  return of(Object.values(emoteList).slice(start, end));
+}
