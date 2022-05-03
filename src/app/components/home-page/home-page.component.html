@@ -5,6 +5,15 @@
     </div>
 </div>
 
+<div class="page-selector">
+    <mat-paginator [length]="length"
+               [pageSize]="pageSize"
+               [hidePageSize]="true"
+               (page)="getPosts($event)"
+               aria-label="Select page">
+    </mat-paginator>
+</div>
+
 
 
 

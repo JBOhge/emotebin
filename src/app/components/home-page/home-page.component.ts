@@ -1,21 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { emoteList } from 'src/app/emoteData';
 import { Emote } from 'src/app/models/emote';
+import { EmoteServiceService } from 'src/app/services/emote-service.service';
+import {PageEvent} from '@angular/material/paginator';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css']
+  styleUrls: ['./home-page.component.css'],
 })
 export class HomePageComponent implements OnInit {
+  emoteList!: Emote[];
+  length = 36;
+  pageSize = 12;
 
-
-  emoteList!:Emote[];
-
-  constructor() { }
+  constructor(private emoteService: EmoteServiceService) {}
 
   ngOnInit(): void {
-    this.emoteList = Object.values(emoteList);
+    this.emoteService.getEmotes(1, this.pageSize).subscribe((res) => {
+      this.emoteList = res;
+    });
+    //this.emoteList = Object.values(emoteList);
+  }
+
+  getPosts(pageEvent: PageEvent){
+    this.emoteService.getEmotes(pageEvent.pageIndex + 1, pageEvent.pageSize).subscribe((res) => {
+      this.emoteList = res;
+    });
   }
 
 }
