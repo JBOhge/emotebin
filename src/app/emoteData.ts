@@ -199,7 +199,7 @@ export const emoteList = {
   },
   27: {
     id: 27,
-    url: 'https://static-cdn.jtvnw.net/emoticons/v2/62834/static/light/3.0',
+    url: 'https://static-cdn.jtvnw.net/emoticons/v2/47/static/light/3.0',
     code: 'PunchTrees',
     description: 'Hey checkout my dirt hut',
     price: 39.99,
