@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Emote } from 'src/app/models/emote';
 import { EmoteServiceService } from 'src/app/services/emote-service.service';
 import {PageEvent} from '@angular/material/paginator';
+import { getTotalNumberEmotes } from 'src/app/emoteData';
 
 @Component({
   selector: 'app-home-page',
@@ -10,7 +11,7 @@ import {PageEvent} from '@angular/material/paginator';
 })
 export class HomePageComponent implements OnInit {
   emoteList!: Emote[];
-  length = 36;
+  length = getTotalNumberEmotes();
   pageSize = 12;
 
   constructor(private emoteService: EmoteServiceService) {}
@@ -25,6 +26,7 @@ export class HomePageComponent implements OnInit {
   getPosts(pageEvent: PageEvent){
     this.emoteService.getEmotes(pageEvent.pageIndex + 1, pageEvent.pageSize).subscribe((res) => {
       this.emoteList = res;
+      window.scrollTo(0,0);
     });
   }
 

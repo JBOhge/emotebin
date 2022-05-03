@@ -3,7 +3,7 @@
         <img [src]="emote.url" alt="emote-image" class="emote-image" data-test="emote-image">
     </div>
     <p data-test="emote-code">{{emote.code}}</p>
-    <p class="emote-description" data-test="emote-description">{{emote.description}}</p>
+    <p class="emote-description" data-test="emote-description">{{emote.description.slice(0,100)}}<span *ngIf="emote.description.length > 100">...</span></p>
     <p data-test="emote-price">{{emote.price.toString()|currency}}</p>
     <div class="btn-container" data-test="add-to-cart-btn">
         <button mat-raised-button color="primary">Add to Cart</button>

@@ -218,3 +218,7 @@ export function getPage(pageNum: number, pageSize: number): Observable<any> {
   let end = start + pageSize;
   return of(Object.values(emoteList).slice(start, end));
 }
+
+export function getTotalNumberEmotes():number {
+  return Object.values(emoteList).length;
+}
