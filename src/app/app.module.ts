@@ -15,6 +15,7 @@ import { InfopageComponent } from './components/infopage/infopage.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { CartPageComponent } from './components/cart-page/cart-page.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     HomePageComponent,
     NavbarComponent,
     InfopageComponent,
+    CartPageComponent,
   ],
   imports: [
     BrowserModule,
