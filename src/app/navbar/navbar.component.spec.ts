@@ -3,7 +3,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { NavbarComponent } from './navbar.component';
 
-fdescribe('NavbarComponent', () => {
+describe('NavbarComponent', () => {
   let component: NavbarComponent;
   let fixture: ComponentFixture<NavbarComponent>;
 

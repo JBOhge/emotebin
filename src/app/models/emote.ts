@@ -1,7 +1,7 @@
 export interface Emote {
-    id: Number,
-    url: String,
-    code: String,
-    description: String,
-    price: Number
+    id: number,
+    url: string,
+    code: string,
+    description: string,
+    price: number
 }
