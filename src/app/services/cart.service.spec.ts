@@ -4,7 +4,7 @@ import { CartItem } from '../models/cart-item';
 
 import { CartService } from './cart.service';
 
-fdescribe('CartService', () => {
+describe('CartService', () => {
   let service: CartService;
 
   beforeEach(() => {

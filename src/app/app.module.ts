@@ -16,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { CartPageComponent } from './components/cart-page/cart-page.component';
-
+import {MatBadgeModule} from '@angular/material/badge';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +38,7 @@ import { CartPageComponent } from './components/cart-page/cart-page.component';
     HttpClientModule,
     FormsModule,
     MatPaginatorModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent],

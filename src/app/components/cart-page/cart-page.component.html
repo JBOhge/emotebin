@@ -1,1 +1,8 @@
-<p>cart-page works!</p>
+<p>Cart page</p>
+<div *ngFor="let cartItem of cart | async">
+    <div>
+        <p>{{cartItem.id + "," + cartItem.emote.code + "," + cartItem.quantity}}</p>
+    </div>
+</div>
+
+<div>{{getSubTotal() | currency}}</div>

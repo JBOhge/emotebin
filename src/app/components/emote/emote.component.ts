@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CartItem } from 'src/app/models/cart-item';
 import { Emote } from 'src/app/models/emote';
+import { CartService } from 'src/app/services/cart.service';
 import { EmoteServiceService } from 'src/app/services/emote-service.service';
 import { emoteList } from '../../emoteData';
 
@@ -9,12 +11,14 @@ import { emoteList } from '../../emoteData';
   styleUrls: ['./emote.component.css'],
 })
 export class EmoteComponent implements OnInit {
-  
-  @Input() emote:Emote = emoteList[3];
+  @Input() emote: Emote = emoteList[3];
 
-  constructor() {}
+  constructor(private cartService:CartService) {}
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void {}
+
+  addToCart() {
+    let item:CartItem = {id:this.emote.id, emote:this.emote, quantity:1};
+    this.cartService.addToCart(item);
   }
 }

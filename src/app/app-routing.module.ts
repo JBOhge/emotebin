@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { EmoteComponent } from './components/emote/emote.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { InfopageComponent } from './components/infopage/infopage.component';
+import { CartPageComponent } from './components/cart-page/cart-page.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path:'info',
     component: InfopageComponent,
+  },
+  {
+    path:'cart',
+    component: CartPageComponent,
   }
 ];
 
