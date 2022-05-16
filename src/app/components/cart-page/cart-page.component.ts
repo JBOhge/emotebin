@@ -22,5 +22,8 @@ export class CartPageComponent implements OnInit {
   getSubTotal(){
     return this.cartService.getSubTotal();
   }
+  deleteItem(cartItem:CartItem){
+    this.cartService.removeFromCart(cartItem);
+  }
 
 }
